@@ -1,4 +1,4 @@
-# GROUP: G5F
+# GROUP: G5F (2020/2021)
 
 
 ### Evaluation
@@ -61,8 +61,8 @@ The semantic analysis verifies everything that was required in checklist for CP2
   
   - This parser is capable of dealing with method overloading.
   - We created extra tests:
-    - 6 tests showcasing how powerful our compiler is (./test/fixtures/public/checkpoint3)
-    - 2 tests showcasing instruction selection in Jasmin (./test/fixtures/public/IfCondOptimization.jmm and ./test/fixtures/public/IIncOptimization.jmm)
+    - 6 tests showcasing how powerful our compiler is ([Checkpoint3](/test/fixtures/public/checkpoint3))
+    - 2 tests showcasing instruction selection in Jasmin ([IfCondOptimization](/test/fixtures/public/IfCondOptimization.jmm) and [IIncOptimization](/test/fixtures/public/IIncOptimization.jmm))
 
 
 
