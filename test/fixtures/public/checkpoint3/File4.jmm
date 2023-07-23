@@ -1,0 +1,60 @@
+import ioPlus;
+class Product {
+    int[] test_arr;
+
+    public int find_product(int[] arr, int n) {
+        int x;
+        int no1;
+        int a;
+        int b;
+        int no2;
+        if (n < 2) {
+            x = 0;
+        }
+        else {
+            no1 = 0;
+            a = arr[0];
+            b = arr[1];
+            x = a*b;
+            while (no1 < 5) {
+                no2 = no1+1;
+                while (no2 < 5) {
+                    if (!(arr[no1] * arr[no2] < a*b)) {
+                        a = arr[no1];
+                        b = arr[no2];
+                        x = a*b;
+                    }
+                    else { }
+                    no2 = no2 + 1;
+                }
+                no1 = no1 + 1;
+            }
+        }
+        return x;
+    }
+
+    public int build_array() {
+        test_arr = new int[5];
+        test_arr[0] = 14;
+        test_arr[1] = 28;
+        test_arr[2] = 0;
+        test_arr[3] = 0-5; // No unary minus in Java--
+        test_arr[4] = 12;
+
+        return 0;
+    }
+
+    public int[] get_array() {
+        return test_arr;
+    }
+
+    public static void main(String[] args) {
+        Product inb;
+        int product;
+        inb = new Product();
+        inb.build_array();
+
+        product = inb.find_product(inb.get_array(), 5);
+        ioPlus.printResult(product);
+    }
+}

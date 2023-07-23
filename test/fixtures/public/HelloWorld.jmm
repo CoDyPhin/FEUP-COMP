@@ -1,0 +1,7 @@
+import ioPlus;
+class HelloWorld {
+    int field;
+    public static void main(String[] args) {
+        ioPlus.printHelloWorld();
+    }
+}

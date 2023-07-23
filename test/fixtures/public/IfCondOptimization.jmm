@@ -1,0 +1,50 @@
+import io;
+class IfCondOptimization {
+
+    public static void main(String[] args) {
+        int i1;
+        int i2;
+        boolean i3;
+        boolean i4;
+        int i5;
+        i1 = 11;
+        i2 = 0;
+        i3 = 1 < 0;
+        i4 = 0 < 1;
+        i5 = 1;
+        while(0 < i1){
+            io.println(1);
+            if(i2 < 0){
+                io.println(2);
+                i2 = i2 + 1;
+            }else{
+                io.println(0-2);
+                if(i3){
+                    io.println(3);
+                    i3 = false;
+                    if(i4){
+                         io.println(4);
+                         i4 = false;
+                         if(0 < i5){
+                            io.println(5);
+                            i5 = i5 - 1;
+                         }else{
+                            io.println(0-5);
+                            i5 = i5 + 1;
+                         }
+                    }else{
+                         io.println(0-4);
+                         i4 = true;
+                    }
+                }else{
+                    io.println(0-3);
+                    i3 = true;
+                }
+                i2 = i2 - 1;
+            }
+            i1 = i1 - 1;
+        }
+        io.println(0-1);
+    }
+
+}

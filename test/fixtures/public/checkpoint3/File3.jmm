@@ -1,0 +1,22 @@
+import io;
+class Factorial {
+
+    public int fact(int n) {
+        int x;
+        if (n < 2) {
+            x = n;
+        }
+        else {
+            x = n * this.fact(n-1);
+        }
+        return x;
+    }
+
+    public static void main(String[] args){
+        int x;
+        Factorial factorial;
+        factorial = new Factorial();
+        x = factorial.fact(5);
+        io.println(x);
+    }
+}

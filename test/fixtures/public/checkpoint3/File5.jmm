@@ -1,0 +1,27 @@
+import io;
+class NoConsecutive {
+
+    public int consec(int n) {
+            int x;
+            if (n < 2) {
+                x = 2;
+            }
+            else {
+                if (n < 3) {
+                    x = 1 + this.consec(n-1);
+                }
+                else {
+                    x = this.consec(n-2) + this.consec(n-1);
+                }
+            }
+            return x;
+    }
+
+    public static void main(String[] args){
+        int x;
+        NoConsecutive no_consecutive;
+        no_consecutive = new NoConsecutive();
+        x = no_consecutive.consec(5);
+        io.println(x);
+    }
+}

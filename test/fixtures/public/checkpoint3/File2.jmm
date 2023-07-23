@@ -1,0 +1,41 @@
+import ioPlus;
+import io;
+
+class Test2 {
+    public int func1(int a) {
+        int c;
+        int b;
+        c = 10;
+        while (c < 20) {
+            c = c + 1;
+            b = 5;
+            if (c < 5) {
+                a = a + 1;
+            }
+            else
+                a = a - 1;
+            while (b < 0) {
+                a = a + b;
+            }
+            b = 5;
+            a = a + this.func2(c);
+        }
+        return a;
+    }
+
+    public int func2(int a) {
+        return this.func3(a - 1) * 2;
+    }
+
+    public int func3(int a) {
+        return a * 3;
+    }
+
+    public static void main(String[] args) {
+        int a;
+        Test2 t;
+        t = new Test2();
+        a = t.func1(1);
+        ioPlus.printResult(a);
+    }
+}

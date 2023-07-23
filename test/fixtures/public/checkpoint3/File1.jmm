@@ -1,0 +1,25 @@
+import ioPlus;
+import io;
+
+class Test1 {
+    public int sumVals(int a) {
+        return a / 2;
+    }
+
+    public int sumVals(int a, int b) {
+        return a * b;
+    }
+
+    public int sumVals(int a, int b, int c) {
+        return a + b + c;
+    }
+
+    public static void main(String[] args) {
+        int a;
+        Test1 t;
+        t = new Test1();
+        a = t.sumVals(10) + t.sumVals(13, 3) + t.sumVals(1, 2, 3);
+
+        ioPlus.printResult(a);
+    }
+}

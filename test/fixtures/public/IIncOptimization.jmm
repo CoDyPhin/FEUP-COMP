@@ -1,0 +1,29 @@
+import io;
+class IncrementVars {
+    public static void main(String[] args) {
+        int i;
+        int j;
+        int k;
+        int l;
+        int m;
+        int n;
+        i = 1;
+        j = 240;
+        k = 722;
+        l = 38000;
+        m = 392;
+        n = 256;
+        i = i + 127;
+        j = j - 10;
+        k = 10 - k;
+        l = l - 1000;
+        m = 3 + m;
+        n = n + 38000;
+        io.println(i);
+        io.println(j);
+        io.println(k);
+        io.println(l);
+        io.println(m);
+        io.println(n);
+    }
+}
